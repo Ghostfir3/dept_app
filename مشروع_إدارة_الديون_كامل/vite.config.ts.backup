@@ -4,7 +4,6 @@ import { defineConfig } from "vite"
 import sourceIdentifierPlugin from 'vite-plugin-source-identifier'
 
 const isProd = process.env.BUILD_MODE === 'prod'
-
 export default defineConfig({
   plugins: [
     react(), 
@@ -14,7 +13,6 @@ export default defineConfig({
       includeProps: true,
     })
   ],
-  base: '/dept_app/', // إضافة base path لـ GitHub Pages
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -44,3 +42,4 @@ export default defineConfig({
     chunkSizeWarningLimit: 600
   }
 })
+

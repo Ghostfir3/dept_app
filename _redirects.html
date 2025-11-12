@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعادة التوجيه - تطبيق إدارة الديون</title>
+    <script>
+        // إعادة توجيه إلى المسار الصحيح
+        sessionStorage.setItem('redirect', 'true');
+        window.location.replace('/dept_app/');
+    </script>
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
+        <h1>🔄 جاري إعادة التوجيه...</h1>
+        <p>سيتم نقلك تلقائياً إلى التطبيق الرئيسي</p>
+    </div>
+</body>
+</html>

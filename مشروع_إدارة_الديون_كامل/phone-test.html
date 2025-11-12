@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار نظام أرقام الهواتف</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            color: #7f8c8d;
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+        }
+        .test-section {
+            margin: 25px 0;
+            padding: 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #34495e;
+            font-size: 1.4em;
+        }
+        .phone-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+        .phone-input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+        }
+        .phone-input:invalid {
+            border-color: #e74c3c;
+        }
+        .phone-input:valid {
+            border-color: #27ae60;
+        }
+        .test-button {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        .result {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .success { 
+            background: #d4edda; 
+            color: #155724; 
+            border: 1px solid #c3e6cb; 
+        }
+        .error { 
+            background: #f8d7da; 
+            color: #721c24; 
+            border: 1px solid #f5c6cb; 
+        }
+        .info {
+            background: #d1ecf1; 
+            color: #0c5460; 
+            border: 1px solid #bee5eb;
+        }
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .example-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .example-card:hover {
+            border-color: #007bff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+        }
+        .example-card h4 {
+            margin: 0 0 10px 0;
+            color: #495057;
+        }
+        .example-card .phone {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .app-links {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .app-links h3 {
+            margin-top: 0;
+            color: #343a40;
+        }
+        .app-links a {
+            display: inline-block;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 5px 10px 5px 0;
+            transition: all 0.3s ease;
+        }
+        .app-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 اختبار نظام أرقام الهواتف</h1>
+            <p>اختبر صحة الأرقام من دول مختلفة بعد التحديث</p>
+        </div>
+
+        <div class="app-links">
+            <h3>🔗 روابط التطبيق المحدث</h3>
+            <a href="https://umptd52jmz71.space.minimax.io" target="_blank">التطبيق الرئيسي</a>
+            <a href="https://umptd52jmz71.space.minimax.io/register" target="_blank">صفحة التسجيل</a>
+            <a href="https://umptd52jmz71.space.minimax.io/merchant/dashboard" target="_blank">لوحة تحكم التاجر</a>
+            <a href="https://umptd52jmz71.space.minimax.io/customer/debts-history" target="_blank">سجل الديون</a>
+        </div>
+
+        <div class="test-section">
+            <h3>📝 اختبار مباشر للمدخلات</h3>
+            <input type="tel" class="phone-input" pattern="[0-9+()\-\s]{8,15}" 
+                   placeholder="جرب إدخال رقم يمني مثل: 778305584">
+            
+            <div>
+                <button class="test-button" onclick="testPhone('778305584')">رقم يمني</button>
+                <button class="test-button" onclick="testPhone('966501234567')">رقم سعودي</button>
+                <button class="test-button" onclick="testPhone('971501234567')">رقم إماراتي</button>
+                <button class="test-button" onclick="testPhone('+1234567890')">رقم دولي</button>
+            </div>
+            
+            <div id="testResult"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>🧪 اختبار أرقام تجريبية</h3>
+            <p>هذه الأرقام تم اختبارها وهي تعمل بنجاح:</p>
+            
+            <div class="examples">
+                <div class="example-card">
+                    <h4>🇾🇪 رقم يمني</h4>
+                    <div class="phone">778305584</div>
+                    <small>تم اختباره في النظام</small>
+                </div>
+                <div class="example-card">
+                    <h4>🇸🇦 رقم سعودي</h4>
+                    <div class="phone">0501234567</div>
+                    <small>الرقم التقليدي</small>
+                </div>
+                <div class="example-card">
+                    <h4>🇦🇪 رقم إماراتي</h4>
+                    <div class="phone">0501234567</div>
+                    <small>تنسيق مماثل</small>
+                </div>
+                <div class="example-card">
+                    <h4>🌍 رقم دولي</h4>
+                    <div class="phone">+1234567890</div>
+                    <small>بدون رمز الدولة</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>⚠️ ملاحظات مهمة</h3>
+            <div class="info">
+                <strong>✅ تم إصلاح المشاكل التالية:</strong>
+                <ul>
+                    <li>إزالة القيد السابق الذي يتطلب 10 أرقام فقط</li>
+                    <li>دعم الأرقام من 8-15 رقم</li>
+                    <li>دعم الرموز الخاصة: + ( ) - والمسافات</li>
+                    <li>تحديث جميع نماذج الإدخال في النظام</li>
+                    <li>إضافة توضيحات للملفات</li>
+                </ul>
+            </div>
+            
+            <div class="info">
+                <strong>📱 الصفحات المحدثة:</strong>
+                <ul>
+                    <li>صفحة التسجيل</li>
+                    <li>صفحة تسجيل الدخول</li>
+                    <li>صفحة إضافة الديون</li>
+                    <li>لوحة تحكم التاجر</li>
+                    <li>صفحة الإعدادات</li>
+                    <li>صفحة ملاحظات العميل</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function testPhone(phoneNumber) {
+            const phoneInput = document.querySelector('.phone-input');
+            const resultDiv = document.getElementById('testResult');
+            
+            // Set the phone number
+            phoneInput.value = phoneNumber;
+            
+            // Check validity
+            if (phoneInput.checkValidity()) {
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        ✅ الرقم "${phoneNumber}" صحيح ومقبول في النظام!
+                    </div>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        ❌ الرقم "${phoneNumber}" غير صحيح.
+                    </div>
+                `;
+            }
+        }
+
+        // Real-time validation
+        document.querySelector('.phone-input').addEventListener('input', function(e) {
+            const resultDiv = document.getElementById('testResult');
+            
+            if (e.target.value.length >= 8) {
+                if (e.target.checkValidity()) {
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            ✅ رقم صحيح!
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <div class="error">
+                            ❌ يرجى إدخال رقم صحيح (8-15 رقم).
+                        </div>
+                    `;
+                }
+            } else {
+                resultDiv.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>

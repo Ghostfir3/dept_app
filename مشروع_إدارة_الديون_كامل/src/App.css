@@ -1,0 +1,208 @@
+#root {
+  margin: 0 auto;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}/* تحسينات عامة لحجم الخطوط والبطاقات */
+
+/* تقليل أحجام البطاقات */
+.card-compact {
+  padding: 0.75rem !important; /* p-3 instead of p-6 */
+}
+
+.card-stat {
+  padding: 0.75rem !important; /* p-3 instead of p-6 */
+}
+
+/* تقليل أحجام الخطوط */
+.text-compact-sm {
+  font-size: 0.75rem !important; /* text-xs */
+}
+
+.text-compact-base {
+  font-size: 0.875rem !important; /* text-sm */
+}
+
+.text-compact-lg {
+  font-size: 1rem !important; /* text-base */
+}
+
+.text-compact-xl {
+  font-size: 1.125rem !important; /* text-lg */
+}
+
+/* تقليل أحجام الأزرار */
+.btn-compact {
+  padding: 0.5rem 0.75rem !important; /* px-3 py-2 */
+}
+
+/* تحسين التباعد */
+.gap-compact {
+  gap: 0.75rem !important; /* gap-3 instead of gap-6 */
+}
+
+.mb-compact {
+  margin-bottom: 1.5rem !important; /* mb-6 instead of mb-8 */
+}
+
+/* تحسين أحجام الأيقونات */
+.icon-sm {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.icon-md {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+/* تحسين أحجام الرؤوس */
+h1.compact {
+  font-size: 1.25rem !important; /* text-xl instead of text-2xl */
+}
+
+h2.compact {
+  font-size: 1.125rem !important; /* text-lg instead of text-xl */
+}
+
+h3.compact {
+  font-size: 1rem !important; /* text-base instead of text-lg */
+}
+
+/* تحسين جداول البيانات */
+.table-compact td,
+.table-compact th {
+  padding: 0.5rem !important;
+  font-size: 0.875rem !important;
+}
+
+.table-compact th {
+  font-size: 0.75rem !important;
+}
+
+/* تحسين النماذج */
+.form-compact .form-group {
+  margin-bottom: 0.75rem !important;
+}
+
+.form-compact label {
+  font-size: 0.75rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.form-compact input,
+.form-compact select,
+.form-compact textarea {
+  padding: 0.5rem !important;
+  font-size: 0.875rem !important;
+}
+
+/* تحسين الـ modals */
+.modal-compact {
+  padding: 1rem !important;
+}
+
+.modal-compact h3 {
+  font-size: 1.125rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* تحسين البطاقات الإحصائية */
+.stat-card-compact {
+  padding: 0.75rem !important;
+}
+
+.stat-card-compact .stat-icon {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.stat-card-compact .stat-number {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+}
+
+.stat-card-compact .stat-label {
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+}
+
+/* تحسين صفحة العميل */
+.customer-header-compact {
+  padding: 1rem !important;
+}
+
+.customer-header-compact .customer-avatar {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+
+.customer-header-compact .customer-title {
+  font-size: 1.125rem !important;
+}
+
+.customer-header-compact .customer-subtitle {
+  font-size: 0.75rem !important;
+}
+
+.customer-btn-compact {
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.875rem !important;
+  gap: 0.25rem !important;
+}
+
+/* تحسين التدرجات والمساحات */
+.section-compact {
+  padding: 1.5rem 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.grid-compact {
+  gap: 1rem !important;
+}
+
+/* تحسين الرسوم البيانية */
+.chart-compact {
+  padding: 1rem !important;
+}
+
+.chart-compact h3 {
+  font-size: 1rem !important;
+  margin-bottom: 0.75rem !important;
+}

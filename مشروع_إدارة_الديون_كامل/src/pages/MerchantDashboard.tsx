@@ -1,5 +1,4 @@
 
-// @ts-nocheck
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase, Debt, SUPABASE_URL } from '../lib/supabase';

@@ -33,11 +33,7 @@ export default function CustomerDashboard() {
 
   useEffect(() => {
     loadData();
-    // تحديث العداد كل ثانية
-    const interval = setInterval(() => {
-      setDebts(prevDebts => [...prevDebts]);
-    }, 1000);
-    return () => clearInterval(interval);
+    // تم إزالة الـ interval غير الضروري لتحسين الأداء
   }, [profile]);
 
   async function loadData() {

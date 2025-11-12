@@ -14,7 +14,7 @@ export default function LoginPage() {
     setLoading(true);
     
     try {
-      const email = `${phone}@example.com`;
+      const email = `${phone}@debtapp.local`;
       const { data, error } = await supabase.auth.signInWithPassword({ email, password });
       
       if (error) throw error;
